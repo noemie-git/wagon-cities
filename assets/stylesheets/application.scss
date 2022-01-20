@@ -11,6 +11,12 @@ body {
   .cities {
     width: 30%;
   }
+  .city.card-container {
+    border: 1px solid white;
+    .card {
+      padding-left: 15px;
+    }
+  }
   .active-city {
     width: 70%;
     margin-left: 20px;
@@ -27,4 +33,5 @@ body {
 .list-group-item {
   background-color: transparent;
   cursor: pointer;
+  border: none;
 }

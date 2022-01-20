@@ -12,12 +12,14 @@ class ActiveCity extends Component {
           <h3>{props.selectedCity.name}</h3>
           <p>{props.selectedCity.address}</p>
           <div>
-            <img src={`https://kitt.lewagon.com/placeholder/cities/${props.selectedCity.slug}`} alt="" width="1000" height="auto"/>
+            <img src={`https://kitt.lewagon.com/placeholder/cities/${props.selectedCity.slug}`} alt="" width="100%" />
           </div>
         </div>
       );
     }
-    return (<div />);
+    return (<div className="active-city">
+      <p>Select a city...</p>
+    </div>);
   }
 }
 

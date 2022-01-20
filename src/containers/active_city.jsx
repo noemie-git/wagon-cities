@@ -1,27 +1,24 @@
-import React from "react";
-import City from "./city";
+/* eslint-disable react/prefer-stateless-function */
+import React, { Component } from "react";
+
 import { connect } from "react-redux";
 
-import { selectedCity } from "../actions";
-
-const Activecity = () => {
-  componentWillMount() {
-    this.props.selectedCity(city);
+class ActiveCity extends Component {
+  render() {
+    const props = this.props;
+    if (props.selectedCity !== undefined && props.selectedCity !== null) {
+      return (
+        <div className="col-sm-8">
+          <h3>{props.selectedCity.name}</h3>
+          <p>{props.selectedCity.address}</p>
+          <div>
+            <img src={`https://kitt.lewagon.com/placeholder/cities/${props.selectedCity.slug}`} alt="" width="1000" height="auto"/>
+          </div>
+        </div>
+      );
+    }
+    return (<div />);
   }
-
-  if (props.selectedCity) {
-    return (
-      <div className="col-sm-5" >
-        <City />
-      </div>
-    );
-  }
-};
-
-function mapStateToProps(state) {
-  return {
-    city: state.city
-  };
 }
 
 function mapStateToProps(state) {

@@ -20,7 +20,7 @@ class CityList extends Component {
 
   render() {
     return (
-      <div className="list-group-item col-sm-7">
+      <div className="list-group-item col-sm-4">
         {this.props.cities.map((city, index) => {
           return <City key={city.name} city={city} tabIndex={index} />;
         })}
